@@ -1,70 +1,78 @@
-Web Technology Class Projects
-Welcome to the repository for our Web Technology class! This collection showcases a variety of hands-on tasks using HTML, CSS, and JavaScript, designed to build foundational web development skills.
+# 🌐 Web Technology Class Projects
 
-Project Overview
+Welcome to the official repository for our **Web Technology** course projects. This collection highlights various practical assignments focused on HTML, CSS, and JavaScript. Each task was designed to help build a strong foundation in front-end web development through hands-on learning.
 
-Throughout the course, we tackled practical assignments that covered essential web technologies. Each project demonstrates a specific concept or feature, helping you understand how modern websites are structured, styled, and made interactive.
+---
 
-Technologies Used
+## 📌 Project Objectives
 
-HTML: For structuring web content
+This course aimed to help us:
 
-CSS: For styling and layout (internal, external, and inline methods)
+- Understand HTML structure and semantics
+- Apply CSS using internal, external, and inline methods
+- Use JavaScript for dynamic behaviors and validation
+- Build real-world mini-projects to reinforce concepts
 
-JavaScript: For interactivity and basic logic
+---
 
-List of Tasks Completed
+## 🧰 Technologies Used
 
-Different types of list bullets (square, circle, disc, a, A, i, I)
+- **HTML** – Structuring and organizing web content  
+- **CSS** – Styling using internal, external, and inline approaches  
+- **JavaScript** – Basic interactivity and client-side logic
 
-Nested lists
+---
 
-HTML text formatting
+## 📚 List of Completed Tasks
 
-Timetable creation
+### 🔤 HTML Projects
+- Lists with various bullet styles: `square`, `circle`, `disc`, `a`, `A`, `i`, `I`
+- Nested lists to display hierarchical data
+- HTML text formatting techniques
+- Timetable creation using HTML tables
+- `ex2.html` – Custom exercise
 
-ex2.html (custom exercise)
+### 🎨 CSS Assignments
+- Using internal, external, and inline CSS styles
+- Applying CSS to `<div>` elements
+- Styling the timetable layout using CSS
 
-CSS: internal, external, and inline usage
+### 🗂️ Layout & Structure
+- Table creation and formatting (Unit 2)
+- Hyperlink-based page navigation
+- Frameset and frame usage for layout demonstration
 
-CSS with div elements
+### ⚙️ JavaScript Tasks
+- "Bulb" toggle interaction (on/off switch)
+- JavaScript-based addition and subtraction
+- Client-side form validation
+- Password field with masking and validation
 
-Applying CSS to the timetable
+---
 
-Table creation (Unit 2)
+## ✨ Key Features
 
-Navigation hyperlinks
+- Clean, readable, and semantic HTML structure
+- Well-organized folder and file structure
+- Practical, real-world examples to apply classroom concepts
+- Modular development with problem-solving focus
+- Dynamic features powered by JavaScript
 
-Frames
+---
 
-Bulb (interactive element)
+## 🚀 Getting Started
 
-JavaScript: simple addition and subtraction
+To view or test any project:
 
-JavaScript form validation
+1. Clone or download this repository.
+2. Open the desired `.html` file in a web browser.
+3. Explore the code and observe the functionality.
 
-Password field implementation
+---
 
-Key Features
+## 📖 About the Course
 
-Efficient and clean use of HTML, CSS, and JavaScript
+This repository is a reflection of our journey in learning and mastering **Web Technology**. Each assignment provided valuable insights into web development, focusing on clarity, creativity, and code efficiency. Whether you're just beginning or revisiting the basics, this project collection is a helpful resource for reinforcing core skills.
 
-Organized folder and file structure for easy navigation
+---
 
-Real-world examples to reinforce learning
-
-Code written to solve specific problem statements
-
-Getting Started
-
-To view any project:
-
-Clone or download the repository.
-
-Open the desired HTML file in your web browser.
-
-About the Course
-
-This repository is part of our journey to master the basics of web development. Each task is designed to reinforce concepts and provide practical experience, making it a valuable resource for beginners and those looking to strengthen their web technology skills.
-
-Want to see code samples or need help with a specific task? Let me know which project you’d like more details about!
