@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recipe Website</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav>
+    <ul>
+      <li><a href="service.html" target="_blank">Services</a></li>
+      <li><a href="about.html" target="_blank">About Us</a></li>
+      <li><a href="contact.html" target="_blank">Contact Us</a></li>
+    </ul>
+  </nav>
+
+
+  <!-- Recipes Section -->
+  <section id="recipes">
+    <h2>Recipes</h2>
+
+    <!-- List of Recipe Items -->
+    <div class="recipe-item" onclick="showRecipe('Pasta')">
+      <img src="pasta.jpg" alt="Pasta">
+      <h3>Pasta</h3>
+      <p>Click to see the recipe.</p>
+    </div>
+    
+    <div class="recipe-item" onclick="showRecipe('Pizza')">
+      <img src="pizza.jpg" alt="Pizza">
+      <h3>Pizza</h3>
+      <p>Click to see the recipe.</p>
+    </div>
+
+    <!-- Continue adding 18 more recipes -->
+    <div class="recipe-item" onclick="showRecipe('Salad')">
+      <img src="salad.jpg" alt="Salad">
+      <h3>Salad</h3>
+      <p>Click to see the recipe.</p>
+    </div>
+    
+    <div class="recipe-item" onclick="showRecipe('Burger')">
+      <img src="burger.jpg" alt="Burger">
+      <h3>Burger</h3>
+      <p>Click to see the recipe.</p>
+    </div>
+
+    <div class="recipe-item" onclick="showRecipe('Tacos')">
+      <img src="tacos.jpg" alt="Tacos">
+      <h3>Tacos</h3>
+      <p>Click to see the recipe.</p>
+    </div>
+    
+
+
+ 
+    
+
+
+    <!-- Add remaining recipes in a similar format -->
+
+    <div id="recipe-details"></div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>

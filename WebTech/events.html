@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Events</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        h1, h2 {
+            color: #2c3e50;
+            text-align: center;
+        }
+        .section {
+            background-color: white;
+            padding: 20px;
+            margin-bottom: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .demo-box {
+            border: 2px solid #3498db;
+            padding: 20px;
+            margin: 15px 0;
+            border-radius: 5px;
+            position: relative;
+            min-height: 50px;
+            transition: all 0.3s ease;
+        }
+        button {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #2980b9;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        .result {
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #eaf2f8;
+            border-radius: 4px;
+            min-height: 20px;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .color-box {
+            width: 100px;
+            height: 100px;
+            margin-top: 10px;
+            background-color: #e74c3c;
+            border-radius: 5px;
+            display: inline-block;
+            cursor: pointer;
+        }
+        .key-box {
+            border: 1px solid #ddd;
+            padding: 10px;
+            min-height: 30px;
+            margin-top: 10px;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <h1>JavaScript Events Demo</h1>
+    
+    <!-- Event Group 1: onclick and onmouseover/onmouseout -->
+    <div class="section">
+        <h2>Click and Mouse Events</h2>
+        
+        <!-- onclick demo -->
+        <div class="demo-box">
+            <h3>onclick Event</h3>
+            <p>Click the button to change the text:</p>
+            <button id="clickBtn" onclick="changeText()">Click Me</button>
+            <div class="result" id="clickResult">Result will appear here</div>
+        </div>
+        
+        <!-- onmouseover and onmouseout demo -->
+        <div class="demo-box">
+            <h3>onmouseover and onmouseout Events</h3>
+            <p>Hover over the colored box below:</p>
+            <div class="color-box" 
+                onmouseover="this.style.backgroundColor='#27ae60'; document.getElementById('hoverResult').innerHTML='Mouse is over the box!'"
+                onmouseout="this.style.backgroundColor='#e74c3c'; document.getElementById('hoverResult').innerHTML='Mouse left the box'">
+            </div>
+            <div class="result" id="hoverResult">Move your mouse over the red box</div>
+        </div>
+    </div>
+    
+    <!-- Event Group 2: onchange and onfocus -->
+    <div class="section">
+        <h2>Form Events</h2>
+        
+        <!-- onchange demo -->
+        <div class="demo-box">
+            <h3>onchange Event</h3>
+            <p>Select an option from the dropdown:</p>
+            <select id="colorSelect" onchange="changeColor()">
+                <option value="">Select a color</option>
+                <option value="#3498db">Blue</option>
+                <option value="#e74c3c">Red</option>
+                <option value="#2ecc71">Green</option>
+                <option value="#f39c12">Orange</option>
+                <option value="#9b59b6">Purple</option>
+            </select>
+            <div class="result" id="colorResult" style="height: 30px;"></div>
+        </div>
+        
+        <!-- onfocus demo -->
+        <div class="demo-box">
+            <h3>onfocus Event</h3>
+            <p>Click inside the input field:</p>
+            <input type="text" id="focusInput" 
+                   placeholder="Click here" 
+                   onfocus="this.style.backgroundColor='#f8f9fa'; document.getElementById('focusResult').innerHTML='Input field is now focused!'"
+                   onblur="this.style.backgroundColor='white'; document.getElementById('focusResult').innerHTML='Input field lost focus'">
+            <div class="result" id="focusResult">Click the input field to focus it</div>
+        </div>
+    </div>
+    
+    <!-- Event Group 3: onkeydown/onkeyup and onsubmit -->
+    <div class="section">
+        <h2>Keyboard and Form Submission Events</h2>
+        
+        <!-- onkeydown and onkeyup demo -->
+        <div class="demo-box">
+            <h3>onkeydown and onkeyup Events</h3>
+            <p>Type something in the field below:</p>
+            <input type="text" id="keyInput" 
+                   placeholder="Type here" 
+                   onkeydown="document.getElementById('keyDownResult').innerHTML='Key Down: ' + this.value"
+                   onkeyup="document.getElementById('keyUpResult').innerHTML='Key Up: ' + this.value">
+            <div class="result" id="keyDownResult">Key down result will appear here</div>
+            <div class="result" id="keyUpResult">Key up result will appear here</div>
+        </div>
+        
+        <!-- onsubmit demo -->
+        <div class="demo-box">
+            <h3>onsubmit Event</h3>
+            <p>Fill out the form and submit it:</p>
+            <form id="demoForm" onsubmit="return validateForm(event)">
+                <input type="text" id="nameInput" placeholder="Enter your name" required>
+                <input type="email" id="emailInput" placeholder="Enter your email" required>
+                <button type="submit">Submit Form</button>
+            </form>
+            <div class="result" id="submitResult">Form submission result will appear here</div>
+        </div>
+    </div>
+
+    <script>
+        // onclick function
+        function changeText() {
+            const currentTime = new Date().toLocaleTimeString();
+            document.getElementById('clickResult').innerHTML = 
+                'Button was clicked! Current time: ' + currentTime;
+        }
+        
+        // onchange function
+        function changeColor() {
+            const select = document.getElementById('colorSelect');
+            const colorResult = document.getElementById('colorResult');
+            
+            if (select.value) {
+                colorResult.style.backgroundColor = select.value;
+                colorResult.innerHTML = 'Selected color: ' + select.options[select.selectedIndex].text;
+            } else {
+                colorResult.style.backgroundColor = 'transparent';
+                colorResult.innerHTML = 'No color selected';
+            }
+        }
+        function validateForm(event) {
+            event.preventDefault();
+            
+            const name = document.getElementById('nameInput').value;
+            const email = document.getElementById('emailInput').value;
+            
+            if (name && email) {
+                document.getElementById('submitResult').innerHTML = 
+                    `Form submitted successfully!<br>Name: ${name}<br>Email: ${email}`;
+                document.getElementById('demoForm').reset();
+            } else {
+                document.getElementById('submitResult').innerHTML = 
+                    'Please fill out all fields!';
+            }
+            
+            return false;
+        }
+    </script>
+</body>
+</html>

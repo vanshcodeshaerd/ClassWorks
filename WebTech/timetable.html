@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navrachana University Vadodara - Timetable</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            color: #333;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .info-section {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+        
+        .info-item {
+            display: flex;
+            margin-bottom: 5px;
+        }
+        
+        .info-label {
+            font-weight: bold;
+            width: 120px;
+        }
+        
+        .schedule-title {
+            text-align: center;
+            color: #d9534f;
+            border-top: 1px solid #ddd;
+            border-bottom: 1px solid #ddd;
+            padding: 8px 0;
+            margin: 15px 0;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        
+        th {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+        
+        td {
+            padding: 8px;
+            text-align: center;
+            border: 1px solid #ddd;
+        }
+        
+        .time-cell {
+            background-color: #f2f2f2;
+            font-weight: bold;
+            vertical-align: middle;
+        }
+        
+        .sub-row {
+            background-color: #f9f9f9;
+        }
+        
+        .lunch-row {
+            background-color: #f0ad4e;
+            color: white;
+            font-weight: bold;
+        }
+        
+        .legend {
+            margin-top: 20px;
+        }
+        
+        .legend-title {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        
+        .legend-items {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        
+        .legend-item {
+            padding: 5px 10px;
+            border-radius: 3px;
+            background-color: #f2f2f2;
+            font-size: 14px;
+        }
+        
+        .cs154 { background-color: #f2f2f2; }
+        .cs193 { background-color: #e2f0f9; }
+        .cs157 { background-color: #f2f2f2; }
+        .cs158 { background-color: #d5eacf; }
+        .eng207 { background-color: #e2f0f9; }
+        .eng208 { background-color: #f9e2e2; }
+        .eng209 { background-color: #e8d6f0; }
+        .lunch { background-color: #f0ad4e; color: white; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Navrachana University Vadodara</h1>
+        
+        <div class="info-section">
+            <div>
+                <div class="info-item">
+                    <div class="info-label">School Name:</div>
+                    <div>School of Engineering and Technology</div>
+                </div>
+                <div class="info-item">
+                    <div class="info-label">Program Name:</div>
+                    <div>B.Tech Computer Science and Engineering</div>
+                </div>
+            </div>
+            <div>
+                <div class="info-item">
+                    <div class="info-label">Semester:</div>
+                    <div>Spring/Autumn:</div>
+                </div>
+                <div class="info-item">
+                    <div class="info-label">Academic Year:</div>
+                    <div>2024-25</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="schedule-title">
+            First Year - Division - A - Class Time Table with effect from date: 8-Jan-25
+        </div>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>TIME</th>
+                    <th>Particular</th>
+                    <th>MONDAY</th>
+                    <th>TUESDAY</th>
+                    <th>WEDNESDAY</th>
+                    <th>THURSDAY</th>
+                    <th>FRIDAY</th>
+                    <th>SATURDAY</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- 10:00 TO 11:00 -->
+                <tr>
+                    <td class="time-cell" rowspan="3">10:00 TO 11:00</td>
+                    <td class="sub-row">Course Code</td>
+                    <td class="cs154">CS154</td>
+                    <td></td>
+                    <td class="eng209">ENG209- Batch A2</td>
+                    <td>CS194 - Batch A1</td>
+                    <td>CS194-Batch A2</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="sub-row">Faculty Name</td>
+                    <td>SS</td>
+                    <td></td>
+                    <td>VP</td>
+                    <td>SP</td>
+                    <td>SP</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="sub-row">Room No.</td>
+                    <td>511</td>
+                    <td></td>
+                    <td>504</td>
+                    <td>303</td>
+                    <td>504</td>
+                    <td></td>
+                </tr>
+                
+                <!-- 11:00 TO 12:00 -->
+                <tr>
+                    <td class="time-cell" rowspan="3">11:00 TO 12:00</td>
+                    <td class="sub-row">Course Code</td>
+                    <td class="cs193">CS193</td>
+                    <td></td>
+                    <td>CS158 -Batch A1</td>
+                    <td class="eng208">ENG208 -Batch A2</td>
+                    <td class="eng208">ENG208 -Batch A1</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="sub-row">Faculty Name</td>
+                    <td>SV</td>
+                    <td></td>
+                    <td>SP</td>
+                    <td>UP</td>
+                    <td>UP</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="sub-row">Room No.</td>
+                    <td>511</td>
+                    <td></td>
+                    <td>505</td>
+                    <td>A402</td>
+                    <td>A402</td>
+                    <td></td>
+                </tr>
+                
+                <!-- 12:00 TO 13:00 -->
+                <tr>
+                    <td class="time-cell" rowspan="3">12:00 TO 13:00</td>
+                    <td class="sub-row">Course Code</td>
+                    <td class="cs157">CS157</td>
+                    <td></td>
+                    <td class="cs154">CS154</td>
+                    <td class="cs154">CS154</td>
+                    <td class="cs193">CS193</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="sub-row">Faculty Name</td>
+                    <td>YC</td>
+                    <td></td>
+                    <td>SS</td>
+                    <td>SS</td>
+                    <td>SV</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="sub-row">Room No.</td>
+                    <td>511</td>
+                    <td></td>
+                    <td>501</td>
+                    <td>501</td>
+                    <td>511</td>
+                    <td></td>
+                </tr>
+                
+                <!-- LUNCH BREAK -->
+                <tr>
+                    <td class="time-cell">13:00 TO 14:00</td>
+                    <td class="sub-row">Course Code</td>
+                    <td class="lunch" colspan="6">LUNCH BREAK</td>
+                </tr>
+                <tr>
+                    <td class="time-cell" rowspan="2"></td>
+                    <td class="sub-row">Faculty Name</td>
+                    <td colspan="6"></td>
+                </tr>
+                <tr>
+                    <td class="sub-row">Room No.</td>
+                    <td colspan="6"></td>
+                </tr>
+                
+                <!-- 14:00 TO 15:00 -->
+                <tr>
+                    <td class="time-cell" rowspan="3">14:00 TO 15:00</td>
+                    <td class="sub-row">Course Code</td>
+                    <td>CS194 -Batch A1</td>
+                    <td></td>
+                    <td></td>
+                    <td class="eng207">ENG207</td>
+                    <td class="eng209">ENG209 -Batch A1</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="sub-row">Faculty Name</td>
+                    <td>SV</td>
+                    <td></td>
+                    <td></td>
+                    <td>UP</td>
+                    <td>VP</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="sub-row">Room No.</td>
+                    <td>303</td>
+                    <td></td>
+                    <td></td>
+                    <td>511</td>
+                    <td>504</td>
+                    <td></td>
+                </tr>
+                
+                <!-- 15:00 TO 16:00 -->
+                <tr>
+                    <td class="time-cell" rowspan="3">15:00 TO 16:00</td>
+                    <td class="sub-row">Course Code</td>
+                    <td class="cs158">CS158 -Batch A2</td>
+                    <td></td>
+                    <td></td>
+                    <td class="eng209">ENG209</td>
+                    <td>CS194 -Batch A2</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="sub-row">Faculty Name</td>
+                    <td>SP</td>
+                    <td></td>
+                    <td></td>
+                    <td>VP</td>
+                    <td>SV</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="sub-row">Room No.</td>
+                    <td>505</td>
+                    <td></td>
+                    <td></td>
+                    <td>511</td>
+                    <td>303</td>
+                    <td></td>
+                </tr>
+                
+                <!-- 16:00 TO 17:00 -->
+                <tr>
+                    <td class="time-cell" rowspan="3">16:00 TO 17:00</td>
+                    <td class="sub-row">Course Code</td>
+                    <td class="eng207">ENG207</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td class="cs157">CS157</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="sub-row">Faculty Name</td>
+                    <td>UP</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>YC</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="sub-row">Room No.</td>
+                    <td>501</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>511</td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <div class="legend">
+            <div class="legend-title">Course Code Legend:</div>
+            <div class="legend-items">
+                <div class="legend-item cs154">CS154 - Data Structures</div>
+                <div class="legend-item cs193">CS193 - Database Systems</div>
+                <div class="legend-item cs157">CS157 - Computer Networks</div>
+                <div class="legend-item cs158">CS158 - Operating Systems</div>
+                <div class="legend-item">CS194 - Web Development</div>
+                <div class="legend-item eng207">ENG207 - Engineering Mathematics</div>
+                <div class="legend-item eng208">ENG208 - Physics for Engineers</div>
+                <div class="legend-item eng209">ENG209 - Technical Communication</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

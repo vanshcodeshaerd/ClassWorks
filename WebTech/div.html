@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Division Operation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f0f8ff;
+        }
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+        }
+        .calculator {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .input-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        button {
+            background-color: #9b59b6;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            width: 100%;
+        }
+        button:hover {
+            background-color: #8e44ad;
+        }
+        .result {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #f4ecf7;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Division Calculator</h1>
+    
+    <div class="calculator">
+        <div class="input-group">
+            <label for="num1">First Number:</label>
+            <input type="number" id="num1" placeholder="Enter first number">
+        </div>
+        
+        <div class="input-group">
+            <label for="num2">Second Number:</label>
+            <input type="number" id="num2" placeholder="Enter second number">
+        </div>
+        
+        <button onclick="divide()">Divide Numbers</button>
+        
+        <div class="result" id="result">
+            Result will be displayed here
+        </div>
+    </div>
+
+    <script>
+        function divide() {
+            // Get the values from input fields
+            const num1 = parseFloat(document.getElementById('num1').value);
+            const num2 = parseFloat(document.getElementById('num2').value);
+            
+            // Check if inputs are valid numbers
+            if (isNaN(num1) || isNaN(num2)) {
+                document.getElementById('result').innerHTML = "Please enter valid numbers!";
+                return;
+            }
+            
+            // Check for division by zero
+            if (num2 === 0) {
+                document.getElementById('result').innerHTML = "Cannot divide by zero!";
+                return;
+            }
+            
+            // Calculate the quotient
+            const quotient = num1 / num2;
+            
+            // Display the result
+            document.getElementById('result').innerHTML = `${num1} ÷ ${num2} = ${quotient}`;
+        }
+    </script>
+</body>
+</html>

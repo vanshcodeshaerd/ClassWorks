@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Password and Email Validation</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        color: #333;
+        margin: 0;
+        padding: 0;
+      }
+
+      .center {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+      }
+
+      /* Form styling */
+      h1 {
+        color: orange;
+        font-size: 36px;
+        margin-bottom: 10px;
+      }
+
+      h3 {
+        font-size: 24px;
+        color: #333;
+        margin-bottom: 20px;
+      }
+
+      label {
+        font-size: 18px;
+        color: #333;
+        margin-bottom: 10px;
+      }
+
+      input[type="text"],
+      input[type="password"],
+      input[type="email"] {
+        font-size: 16px;
+        padding: 10px;
+        width: 250px;
+        margin: 10px 0;
+        border: 2px solid #ccc;
+        border-radius: 5px;
+        outline: none;
+      }
+
+      input[type="text"]:focus,
+      input[type="password"]:focus,
+      input[type="email"]:focus {
+        border-color: orange;
+      }
+
+      input[type="submit"],
+      button[type="reset"] {
+        background-color: orange;
+        color: white;
+        padding: 10px 20px;
+        font-size: 18px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-top: 10px;
+      }
+
+      input[type="submit"]:hover,
+      button[type="reset"]:hover {
+        background-color: darkorange;
+      }
+
+      span {
+        font-size: 16px;
+        margin-top: 10px;
+        display: block;
+      }
+
+      /* Error and success messages */
+      #message {
+        font-weight: bold;
+      }
+
+      #message.error {
+        color: red;
+      }
+
+      #message.success {
+        color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="center">
+      <h1 style="color: orange">Nucleus</h1>
+      <h3>Validate Email and Password</h3>
+      <form onsubmit="return verifyForm()">
+        <!-- Email Field -->
+        <label for="email">Enter Email ID</label><br />
+        <input type="email" id="email" name="email" required /><br /><br />
+
+        <!-- Password Field -->
+        <label for="pswd">Enter Password</label><br />
+        <input type="password" id="pswd" name="pswd" required /><br /><br />
+
+        <span id="message" style="color: orange"></span><br /><br />
+
+        <input type="submit" value="Submit" style="border-color: orange" />
+        <button type="reset" style="border-color: orange">Reset</button>
+      </form>
+    </div>
+
+    <script>
+      function verifyForm() {
+        const password = document.getElementById("pswd").value;
+        const email = document.getElementById("email").value;
+        const message = document.getElementById("message");
+
+    
+        const hasUppercase = /[A-Z]/.test(password);
+        const hasLowercase = /[a-z]/.test(password);
+        const hasDigit = /[0-9]/.test(password);
+        const hasSpecialChar = /[@$!&]/.test(password);
+        const isLongEnough = password.length > 8;
+        const firstCharacterIsUppercase = /^[A-Z]/.test(password);
+
+       
+        const emailid = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,3}$/;
+        const isValidEmail = emailid.test(email);
+
+    
+        if (email === "") {
+          message.textContent = "❌ Email field cannot be left blank.";
+          message.style.color = "red";
+          return false;
+        } else if (!isValidEmail) {
+          message.textContent = "❌ Please enter a valid email address.";
+          message.style.color = "red";
+          return false;
+        }
+
+        // Password validation
+        if (password === "") {
+          message.textContent = "❌ Password field cannot be left blank.";
+          message.style.color = "red";
+          return false;
+        } else if (!isLongEnough) {
+          message.textContent = "❌ Password must be longer than 8 characters.";
+          message.style.color = "red";
+          return false;
+        } else if (!firstCharacterIsUppercase) {
+          message.textContent = "❌ The first character of the password must be uppercase.";
+          message.style.color = "red";
+          return false;
+        } else if (!hasUppercase) {
+          message.textContent = "❌ Password must include at least one uppercase letter.";
+          message.style.color = "red";
+          return false;
+        } else if (!hasLowercase) {
+          message.textContent = "❌ Password must include at least one lowercase letter.";
+          message.style.color = "red";
+          return false;
+        } else if (!hasDigit) {
+          message.textContent = "❌ Password must include at least one number.";
+          message.style.color = "red";
+          return false;
+        } else if (!hasSpecialChar) {
+          message.textContent = "❌ Password must include at least one special character (@, $, !, &).";
+          message.style.color = "red";
+          return false;
+        } else {
+          message.style.color = "green";
+          message.textContent = "✅ Email and Password are valid. Submission successful!";
+          return true;
+        }
+      }
+    </script>
+  </body>
+</html>

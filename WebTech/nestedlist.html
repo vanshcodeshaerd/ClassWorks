@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML List Style Examples</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        h1, h2 {
+            color: #333;
+        }
+        
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+        }
+        
+        .list-section {
+            flex: 1;
+            min-width: 300px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .disc {
+            list-style-type: disc;
+        }
+        
+        .circle {
+            list-style-type: circle;
+        }
+        
+        .square {
+            list-style-type: square;
+        }
+        
+        .decimal {
+            list-style-type: decimal;
+        }
+        
+        .lower-alpha {
+            list-style-type: lower-alpha;
+        }
+        
+        .upper-alpha {
+            list-style-type: upper-alpha;
+        }
+        
+        .lower-roman {
+            list-style-type: lower-roman;
+        }
+        
+        .upper-roman {
+            list-style-type: upper-roman;
+        }
+        
+        .code {
+            background-color: #f5f5f5;
+            padding: 10px;
+            border-radius: 5px;
+            font-family: monospace;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="color: #4a6fa5;">HTML List Style Examples</h1>
+    
+    <div class="container">
+        <div class="list-section">
+            <h2 style="color: #d35400;">Unordered Lists</h2>
+            
+            <h3 style="color: #27ae60;">Disc (Default)</h3>
+            <ul class="disc">
+                <li style="color: #3498db;">Item 1</li>
+                <li style="color: #3498db;">Item 2</li>
+                <li style="color: #3498db;">Item 3</li>
+            </ul>
+            <div class="code">list-style-type: disc;</div>
+            
+            <h3 style="color: #27ae60;">Circle</h3>
+            <ul class="circle">
+                <li style="color: #9b59b6;">Item 1</li>
+                <li style="color: #9b59b6;">Item 2</li>
+                <li style="color: #9b59b6;">Item 3</li>
+            </ul>
+            <div class="code">list-style-type: circle;</div>
+            
+            <h3 style="color: #27ae60;">Square</h3>
+            <ul class="square">
+                <li style="color: #e74c3c;">Item 1</li>
+                <li style="color: #e74c3c;">Item 2</li>
+                <li style="color: #e74c3c;">Item 3</li>
+            </ul>
+            <div class="code">list-style-type: square;</div>
+        </div>
+        
+        <div class="list-section">
+            <h2 style="color: #d35400;">Ordered Lists</h2>
+            
+            <h3 style="color: #27ae60;">Decimal (Default)</h3>
+            <ol class="decimal">
+                <li style="color: #16a085;">Item 1</li>
+                <li style="color: #16a085;">Item 2</li>
+                <li style="color: #16a085;">Item 3</li>
+            </ol>
+            <div class="code">list-style-type: decimal;</div>
+            
+            <h3 style="color: #27ae60;">Lowercase Letters</h3>
+            <ol class="lower-alpha">
+                <li style="color: #f39c12;">Item 1</li>
+                <li style="color: #f39c12;">Item 2</li>
+                <li style="color: #f39c12;">Item 3</li>
+            </ol>
+            <div class="code">list-style-type: lower-alpha;</div>
+            
+            <h3 style="color: #27ae60;">Uppercase Letters</h3>
+            <ol class="upper-alpha">
+                <li style="color: #8e44ad;">Item 1</li>
+                <li style="color: #8e44ad;">Item 2</li>
+                <li style="color: #8e44ad;">Item 3</li>
+            </ol>
+
+            
+            <h3 style="color: #27ae60;">Lowercase Roman Numerals</h3>
+            <ol class="lower-roman">
+                <li style="color: #2980b9;">Item 1</li>
+                <li style="color: #2980b9;">Item 2</li>
+                <li style="color: #2980b9;">Item 3</li>
+            </ol>
+            <div class="code">list-style-type: lower-roman;</div>
+            
+            <h3 style="color: #27ae60;">Uppercase Roman Numerals</h3>
+            <ol class="upper-roman">
+                <li style="color: #c0392b;">Item 1</li>
+                <li style="color: #c0392b;">Item 2</li>
+                <li style="color: #c0392b;">Item 3</li>
+            </ol>
+  
+        </div>
+    </div>
+
+    <div class="list-section" style="margin-top: 30px;">
+        <h2 style="color: #d35400;">Nested Lists</h2>
+        
+        <h3 style="color: #27ae60;">Nested Unordered Lists</h3>
+        <ul style="list-style-type: disc; color: #3498db;">
+            <li>First level item 1</li>
+            <li>First level item 2
+                <ul style="list-style-type: circle; color: #9b59b6;">
+                    <li>Second level item 1</li>
+                    <li>Second level item 2
+                        <ul style="list-style-type: square; color: #e74c3c;">
+                            <li>Third level item 1</li>
+                            <li>Third level item 2</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li>First level item 3</li>
+        </ul>
+ 
+        
+        <h3 style="color: #27ae60;">Nested Ordered Lists</h3>
+        <ol style="list-style-type: decimal; color: #16a085;">
+            <li>First level item 1</li>
+            <li>First level item 2
+                <ol style="list-style-type: lower-alpha; color: #f39c12;">
+                    <li>Second level item 1</li>
+                    <li>Second level item 2
+                        <ol style="list-style-type: lower-roman; color: #2980b9;">
+                            <li>Third level item 1</li>
+                            <li>Third level item 2</li>
+                        </ol>
+                    </li>
+                </ol>
+            </li>
+            <li>First level item 3</li>
+        </ol>
+    
+        
+        <h3 style="color: #27ae60;">Mixed Nested Lists</h3>
+        <ul style="list-style-type: disc; color: #3498db;">
+            <li>Unordered first level</li>
+            <li>Contains ordered list
+                <ol style="list-style-type: upper-alpha; color: #8e44ad;">
+                    <li>Ordered second level</li>
+                    <li>Contains unordered list
+                        <ul style="list-style-type: square; color: #e74c3c;">
+                            <li>Back to unordered</li>
+                            <li>Third level</li>
+                        </ul>
+                    </li>
+                </ol>
+            </li>
+            <li>Back to first level</li>
+        </ul>
+
+    </div>
+</body>
+</html>
